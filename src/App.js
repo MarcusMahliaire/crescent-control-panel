@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import {VRCanvas} from '@react-three/xr';
+import { Suspense } from 'react';
 import './App.css';
+import Three from './components/three/scene';
+import {Physics} from '@react-three/cannon';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <VRCanvas vr="true" id="three-canvas-container" shadows>
+      <Suspense fallback={null}>
+      <Physics
+      iterations={5}
+      maxSubSteps={10}
+      size={1000}
+      stepSize={1/60}
+      tolerance= {0.001}
+      >
+        <Three/>
+        </Physics>
+      </Suspense>
+    </VRCanvas>
   );
 }
 

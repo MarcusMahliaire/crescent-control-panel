@@ -1,0 +1,11 @@
+Model Information:
+* title:	NFT Hydroponics System
+* source:	https://sketchfab.com/3d-models/nft-hydroponics-system-32d2e3350354429ea2d44c4a3184dfb3
+* author:	jaimerog (https://sketchfab.com/jaimerog)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "NFT Hydroponics System" (https://sketchfab.com/3d-models/nft-hydroponics-system-32d2e3350354429ea2d44c4a3184dfb3) by jaimerog (https://sketchfab.com/jaimerog) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

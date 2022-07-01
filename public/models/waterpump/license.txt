@@ -1,0 +1,11 @@
+Model Information:
+* title:	Water pump
+* source:	https://sketchfab.com/3d-models/water-pump-607c8859f08d4893aa6935eca3dd2236
+* author:	Daz (https://sketchfab.com/Darren.Hogan)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Water pump" (https://sketchfab.com/3d-models/water-pump-607c8859f08d4893aa6935eca3dd2236) by Daz (https://sketchfab.com/Darren.Hogan) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
