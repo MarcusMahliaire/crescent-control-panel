@@ -1,4 +1,4 @@
-import { PerspectiveCamera, OrbitControls, Environment } from "@react-three/drei";
+import { PerspectiveCamera, OrbitControls, Environment, Stars, Sky, Cloud } from "@react-three/drei";
 // import { useFrame} from "@react-three/fiber";
 // import {useEffect, useFrame, useRef} from 'react';
 // import { usePlane, useSphere } from '@react-three/cannon'
@@ -12,14 +12,23 @@ import Plane from '../Plane';
 import Ball from "../Ball";
 import Hud from './Hud';
 import Jar from './Jar';
+import Floater from "../Floater";
 
 // import { angleToRadians } from "../../utils/angle";
 
 
 export default function Three() {
+
     // const lightHelper = new THREE.DirectionalLightHelper()
+
     return (
         <>
+            <Floater />
+
+            <Stars radius={300} depth={50} count={5000} factor={6} saturation={0} fade speed={1} />
+
+            <Sky scale={1200} sunPosition={[2, 0.2, 10]} azimuth={0.25} />
+
             {/*Jar*/}
             <Jar position={[2, 4, -10]} />
 
@@ -29,7 +38,7 @@ export default function Three() {
 
             {/* Camera */}
             <OrbitControls />
-            <PerspectiveCamera makeDefault position={[-20, 15, 0]} />
+            <PerspectiveCamera makeDefault position={[-19, 15, 30]} />
 
             {/* Cube */}
             <Cube position={[0.4, 6, -1]} />
@@ -67,6 +76,7 @@ export default function Three() {
             {/* <spotLight args={["#ffffff", 1.5, 7, angleToRadians(45), 0.4]} position={[-3, 1, 0]} castShadow /> */}
             <directionalLight args={["#ffffff", .8]} position={[-5, 12, 10]} castShadow shadow-mapSize={[2048, 2048]} shadow-camera-top={50} shadow-camera-right={50} shadow-camera-left={-50} shadow-camera-bottom={-50} />
             <ambientLight args={["#FFFFFF", 0.2]} />
+
             {/* Environment needs own component*/}
             <Environment background>
                 <mesh>
@@ -74,6 +84,15 @@ export default function Three() {
                     <meshBasicMaterial side={THREE.BackSide} color='#C2B280' />
                 </mesh>
             </Environment>
+
+            {/* <Environment ground /> */}
+            <Cloud
+                opacity={0.8}
+                speed={0.2} // Rotation speed
+                width={1000} // Width of the full cloud
+                depth={10} // Z-dir depth
+                segments={150} // Number of particles
+            />
         </>
     )
 }
