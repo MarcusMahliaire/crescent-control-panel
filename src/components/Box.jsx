@@ -10,7 +10,7 @@ export default function Cube(props) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <Interactive onSelect={() => console.log('clicked!')} onHover={() => setIsHovered(true)} onBlur={() => setIsHovered(false)} >
+    <Interactive onSelect={() => console.log(isHovered)} onHover={() => setIsHovered(true)} onBlur={() => setIsHovered(false)} >
       <RayGrab>
         <mesh receiveShadow castShadow ref={ref}>
           <boxGeometry />
